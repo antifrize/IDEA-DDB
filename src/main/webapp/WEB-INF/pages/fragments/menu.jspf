@@ -1,0 +1,43 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<div class="menuItem">
+    <a href="/instructors">Our Instructors</a>
+</div>
+
+<div class="menuItem">
+    <a href="/students">Our Students</a>
+</div>
+
+<div class="menuItem">
+    <a href="/planes">Our Planes</a>
+</div>
+
+
+<div class="menuItem">
+    <a href="/cabinet">Cabinet</a>
+</div>
+
+<sec:authorize access="isAuthenticated()">
+    <sec:authorize access="hasRole('ROLE_STUDENT')">
+        <div class="menuItem">
+            <a href="/request">Lesson request</a>
+        </div>
+    </sec:authorize>
+    <sec:authorize access="hasRole('ROLE_ADMIN')">
+        <div class="menuItem">
+            <a href="/stats">Statistics</a>
+        </div>
+        <div class="menuItem">
+            <a href="/approve">Approvance</a>
+        </div>
+    </sec:authorize>
+
+    <div class="menuItem">
+        <a href="/schedule">Schedule</a>
+    </div>
+
+    <div class="menuItem">
+        <a href="/logout">Logout</a>
+    </div>
+
+</sec:authorize>

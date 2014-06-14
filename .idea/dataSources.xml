@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1859841807">
+    <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="7527beb8-3006-4e38-87b4-1d74b55a4ffe">
+      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@localhost:1521:xe</jdbc-url>
+      <user-name>TAILWHEELS</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries>
+        <library>
+          <url>file://C:\Users\VMakarenko\Downloads\ojdbc6.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

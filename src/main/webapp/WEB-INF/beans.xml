@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       ">
+    <bean id="instructorService" class="ru.umc806.vmakarenko.service.mock.InstructrorServiceImpl"/>
+    <bean id="instructorDAO" class="ru.umc806.vmakarenko.dao.db.InstructorDAOImpl"/>
+    <bean id="studentService" class="ru.umc806.vmakarenko.service.mock.StudentServiceImpl"/>
+    <bean id="studentDAO" class="ru.umc806.vmakarenko.dao.db.StudentDAOImpl"/>
+    <bean id="scheduleService" class="ru.umc806.vmakarenko.service.mock.ScheduleServiceImpl"/>
+    <bean id="scheduleDAO" class="ru.umc806.vmakarenko.dao.db.ScheduleDAOImpl"/>
+    <bean id="personDAO" class="ru.umc806.vmakarenko.dao.db.PersonDAOImpl"/>
+    <bean id="menuService" class="ru.umc806.vmakarenko.service.mock.MenuServiceImpl"/>
+    <bean id="personService" class="ru.umc806.vmakarenko.service.mock.PersonServiceImpl"/>
+    <bean id="loginService" class="ru.umc806.vmakarenko.service.mock.LoginServiceImpl"/>
+    <bean id="loginDAO" class="ru.umc806.vmakarenko.dao.mock.LoginDAOImpl"/>
+    <bean id="planeDAO" class="ru.umc806.vmakarenko.dao.db.PlaneDAOImpl"/>
+    <bean id="planeService" class="ru.umc806.vmakarenko.service.mock.PlaneServiceImpl"/>
+    <bean id="roleService" class="ru.umc806.vmakarenko.util.RoleService" />
+    <bean id="instructorPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.InstructorPropertyEditor"/>
+    <bean id="planePropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.PlanePropertyEditor"/>
+    <bean id="studentPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.StudentPropertyEditor"/>
+    <bean id="scheduleComponent" class="ru.umc806.vmakarenko.util.schedule.ScheduleComponent" scope="request">
+        <aop:scoped-proxy/>
+    </bean>
+
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="exposedContextBeanNames">
+            <list>
+                <value>menuService</value>
+                <value>instructorService</value>
+                <value>studentService</value>
+                <value>planeService</value>
+            </list>
+        </property>
+    </bean>
+    <!--bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+        >
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean-->
+
+    <!-- Hibernate session factory -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="username" value="TAILWHEELS" />
+        <property name="password" value="123456" />
+    </bean>
+
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>ru.umc806.vmakarenko.domain.Person</value>
+                <value>ru.umc806.vmakarenko.domain.Schedule</value>
+                <value>ru.umc806.vmakarenko.domain.Instructor</value>
+                <value>ru.umc806.vmakarenko.domain.Plane</value>
+                <value>ru.umc806.vmakarenko.domain.Student</value>
+                <value>ru.umc806.vmakarenko.domain.Administrator</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+          p:sessionFactory-ref="mySessionFactory" />
+
+    <tx:annotation-driven/>
+
+</beans>
