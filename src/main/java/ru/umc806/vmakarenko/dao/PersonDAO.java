@@ -7,7 +7,6 @@ import ru.umc806.vmakarenko.util.Filter;
 import java.util.List;
 
 public interface PersonDAO {
-	public List<Person> getPersonsList();
-    public List<Person> getPersonsList(Filter filter);
-    public Person getPerson(Person person);
+	public List<Person> list();
+    public List<Person> list(Filter filter);
 }

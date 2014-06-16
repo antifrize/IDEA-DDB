@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by VMakarenko on 5/16/14.
  */
-public interface InstructrorService {
+public interface InstructorService {
     public List<Instructor> getAll();
     public List<Instructor> getAllBlacklistedInstructors(Instructor instructor);
     public List<Student> getBlacklistedStudents(Instructor instructor);
@@ -22,4 +22,6 @@ public interface InstructrorService {
     public List<Schedule> getSchedules(Instructor instructor);
     public List<Schedule> getSchedulesByStudent(Instructor instructor, Student student);
     public List<Instructor> getInstructors(Filter filter);
+    public List<Instructor> getUnapproved();
+    public boolean approve(String id);
 }

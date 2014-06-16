@@ -1,4 +1,4 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -11,25 +11,17 @@ import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public class PlaneDAOImpl implements PlaneDAO {
-
+public class PlaneDAOImpl  extends CommonDAOImpl implements PlaneDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
     @Override
-    public List<Plane> getAll() {
-        return getPlanes(new Filter());
+    public List<Plane> list() {
+        return list(new Filter());
     }
 
     @Override
-    public List<Plane> getPlanes(Filter filter) {
+    public List<Plane> list(Filter filter) {
         Session session = sessionFactory.getCurrentSession();
 
         Criteria criteria = session.createCriteria(Plane.class,"plane");
@@ -51,13 +43,4 @@ public class PlaneDAOImpl implements PlaneDAO {
         return criteria.list();
     }
 
-    @Override
-    public boolean addPlane(Plane plane) {
-        return false;
-    }
-
-    @Override
-    public boolean deletePlane(int id) {
-        return false;
-    }
 }

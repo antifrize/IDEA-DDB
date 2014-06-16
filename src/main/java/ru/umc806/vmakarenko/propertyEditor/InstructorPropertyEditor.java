@@ -1,13 +1,11 @@
 package ru.umc806.vmakarenko.propertyEditor;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.umc806.vmakarenko.dao.InstructorDAO;
 import ru.umc806.vmakarenko.domain.Instructor;
 import ru.umc806.vmakarenko.domain.Person;
-import ru.umc806.vmakarenko.service.InstructrorService;
+import ru.umc806.vmakarenko.service.InstructorService;
 import ru.umc806.vmakarenko.util.Filter;
 
-import javax.transaction.Transactional;
 import java.beans.PropertyEditorSupport;
 import java.util.List;
 
@@ -16,7 +14,7 @@ import java.util.List;
  */
 public class InstructorPropertyEditor extends PropertyEditorSupport {
     @Autowired
-    InstructrorService instructorService;
+    InstructorService instructorService;
 
     @Override
     public void setAsText(String text) throws IllegalArgumentException {

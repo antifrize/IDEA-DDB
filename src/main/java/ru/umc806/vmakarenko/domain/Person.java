@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="person")
 public class Person {
     @Id
-    @Column(name="person_id")
+    @Column(name=";")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "person_seq_gen")
     @SequenceGenerator(name = "person_seq_gen",sequenceName = "person_seq")
     private Integer id;
@@ -64,4 +64,4 @@ public class Person {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-}
+   }

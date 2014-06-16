@@ -2,15 +2,11 @@ package ru.umc806.vmakarenko.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.transaction.annotation.Transactional;
 import ru.umc806.vmakarenko.dao.PersonDAO;
 import ru.umc806.vmakarenko.domain.Person;
-import ru.umc806.vmakarenko.service.PersonService;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -60,7 +56,7 @@ public class RoleService {
     public Person getPerson(String username){
         Person person = new Person();
         person.setLogin(username);
-        List<Person> list = personDAO.getPersonsList(new Filter().setPerson(person));
+        List<Person> list = personDAO.list(new Filter().setPerson(person));
         if(list!=null){
             return list.get(0);
         }else{

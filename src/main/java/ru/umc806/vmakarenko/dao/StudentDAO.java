@@ -7,9 +7,7 @@ import ru.umc806.vmakarenko.util.Filter;
 import java.util.List;
 
 public interface StudentDAO {
-	public List<Student> getStudentsList();
-    public List<Student> getStudentsList(Filter filter);
-    public Student getStudent(int id);
-    public boolean deleteStudent(int id);
-    public boolean addStudent(Student student);
+	public List<Student> list();
+    public List<Student> list(Filter filter);
+    public Student get(int id);
 }

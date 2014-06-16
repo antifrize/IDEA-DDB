@@ -17,5 +17,7 @@ public interface StudentService {
     public Instructor getInstructorBySchedule(Schedule schedule);
     public List<Schedule> getPreferredSchedules();
     public List<Student> getStudent(Filter filter);
+    public List<Student> getUnapproved();
+    public boolean approve(String id);
 }
 

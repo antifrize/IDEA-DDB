@@ -7,9 +7,6 @@ import ru.umc806.vmakarenko.util.Filter;
 import java.util.List;
 
 public interface ScheduleDAO {
-	public List<Schedule> getSchedulesList();
-    public List<Schedule> getSchedulesList(Filter filter);
-    public Schedule getSchedule(Schedule schedule);
-    public boolean add(Schedule schedule);
-    public boolean delete(Filter filter);
+	public List<Schedule> list();
+    public List<Schedule> list(Filter filter);
 }

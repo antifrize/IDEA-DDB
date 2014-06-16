@@ -1,7 +1,6 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.hibernate.Criteria;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -16,26 +15,22 @@ import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public class InstructorDAOImpl implements InstructorDAO {
+public class InstructorDAOImpl  extends CommonDAOImpl implements InstructorDAO {
     Logger LOG = LoggerFactory.getLogger(InstructorDAOImpl.class);
     @Autowired
     private SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
+    public InstructorDAOImpl(){
+        super(Instructor.class);
     }
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
-    public List<Instructor> getInstructorsList() {
-        return getInstructorsList(new Filter());
+    public List<Instructor> list() {
+        return list(new Filter());
     }
 
     @Override
-    public List<Instructor> getInstructorsList(Filter filter) {
-        LOG.debug("gonna get hibernate session");
+    public List<Instructor> list(Filter filter) {
+        LOG.debug("gonna list hibernate session");
         Session session = sessionFactory.getCurrentSession();
         LOG.debug("got session from hibernate");
 
@@ -74,10 +69,16 @@ public class InstructorDAOImpl implements InstructorDAO {
     }
 
 
-
     @Override
-    public Instructor getInstructor(Student student) {
-        return null;
+    public Instructor get(int id) {
+        Instructor instructor = new Instructor();
+        instructor.setId(id);
+        List<Instructor> list = list(new Filter().setInstructor(instructor));
+        if(list.isEmpty()){
+            return null;
+        }else{
+            return list.get(0);
+        }
     }
 
 }

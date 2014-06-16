@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -23,13 +22,11 @@ import ru.umc806.vmakarenko.propertyEditor.InstructorPropertyEditor;
 import ru.umc806.vmakarenko.propertyEditor.PlanePropertyEditor;
 import ru.umc806.vmakarenko.propertyEditor.StudentPropertyEditor;
 import ru.umc806.vmakarenko.service.*;
-import ru.umc806.vmakarenko.service.mock.InstructrorServiceImpl;
 import ru.umc806.vmakarenko.util.CabinetRequestObject;
 import ru.umc806.vmakarenko.util.Filter;
 import ru.umc806.vmakarenko.util.RoleService;
 import ru.umc806.vmakarenko.util.ScheduleException;
 import ru.umc806.vmakarenko.util.schedule.ScheduleComponent;
-import sun.misc.Request;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
@@ -41,7 +38,7 @@ public class CommonController {
     private Logger LOG = LoggerFactory.getLogger(CommonController.class);
 
     @Autowired
-    private InstructrorService instructorService;
+    private InstructorService instructorService;
     @Autowired
     private StudentService studentService;
     @Autowired
@@ -108,26 +105,26 @@ public class CommonController {
     @RequestMapping(method = RequestMethod.GET,value="register")
     public String register(ModelMap model) {
         model.addAttribute("message", "Hello world!");
-        return "register";
+        return "cabinet-register";
     }
 
     @RequestMapping(method = RequestMethod.GET,value="instructors")
     public ModelAndView getInstructorsList(ModelMap model) {
-        LOG.debug("get instructorService list");
+        LOG.debug("list instructorService list");
         ModelAndView mav = new ModelAndView("instructors-list");
         mav.addObject("instructors", instructorService.getAll());
         return mav;
     }
     @RequestMapping(method = RequestMethod.GET,value="students")
     public ModelAndView getStudentsList(ModelMap model) {
-        LOG.debug("get students list");
+        LOG.debug("list students list");
         ModelAndView mav = new ModelAndView("students-list");
         mav.addObject("students", studentService.getAll());
         return mav;
     }
     @RequestMapping(method = RequestMethod.GET,value="planes")
     public ModelAndView getPlanesList(ModelMap model) {
-        LOG.debug("get planes list");
+        LOG.debug("list planes list");
         ModelAndView mav = new ModelAndView("planes-list");
         mav.addObject("planes", planeService.getAll());
         return mav;
@@ -178,7 +175,7 @@ public class CommonController {
         try{
             if(cro!=null){
                 Schedule schedule = cro.getSchedule();
-                schedule.setStudent(studentService.getStudent(new Filter().setPerson(roleService.getPerson("vanya"))).get(0));
+                schedule.setStudent(studentService.getStudent(new Filter().setPerson(roleService.getPerson("sergey"))).get(0));
                 scheduleService.addIfPossible(schedule);
                 resultString = "You successfully requested a lesson.";
             }
@@ -208,9 +205,11 @@ public class CommonController {
         return mav;
     }
 
-    @RequestMapping(value = "approve",method = RequestMethod.POST)
+    @RequestMapping(value = "approve",method = RequestMethod.GET)
     public ModelAndView approvance() {
         ModelAndView mav = new ModelAndView("cabinet-approve");
+        mav.addObject("students",studentService.getUnapproved());
+        mav.addObject("instructors",instructorService.getUnapproved());
         return mav;
     }
 }

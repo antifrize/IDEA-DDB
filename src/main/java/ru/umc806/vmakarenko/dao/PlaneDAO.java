@@ -8,8 +8,6 @@ import ru.umc806.vmakarenko.util.Filter;
 import java.util.List;
 
 public interface PlaneDAO {
-	public List<Plane> getAll();
-	public List<Plane> getPlanes(Filter filter);
-    public boolean addPlane(Plane plane);
-    public boolean deletePlane(int id);
- }
+	public List<Plane> list();
+	public List<Plane> list(Filter filter);
+}

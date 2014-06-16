@@ -9,7 +9,6 @@ import ru.umc806.vmakarenko.domain.Person;
 import ru.umc806.vmakarenko.service.PersonService;
 import ru.umc806.vmakarenko.util.Filter;
 
-import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
 /**
@@ -27,12 +26,12 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public boolean isInstructor(Person person) {
-        return instructorDAO.getInstructorsList(new Filter().setPerson(person)).size()>0;
+        return instructorDAO.list(new Filter().setPerson(person)).size()>0;
     }
 
     @Override
     public boolean isStudent(Person person) {
-        return studentDAO.getStudentsList(new Filter().setPerson(person)).size()>0;
+        return studentDAO.list(new Filter().setPerson(person)).size()>0;
     }
 
     @Override
@@ -45,7 +44,7 @@ public class PersonServiceImpl implements PersonService {
         LOG.debug("isInstructor?");
         Person person = new Person();
         person.setLogin(username);
-        return instructorDAO.getInstructorsList(new Filter().setPerson(person)).size()>0;
+        return instructorDAO.list(new Filter().setPerson(person)).size()>0;
     }
 
     @Override
@@ -53,7 +52,7 @@ public class PersonServiceImpl implements PersonService {
         LOG.debug("isStudent?");
         Person person = new Person();
         person.setLogin(username);
-        return studentDAO.getStudentsList(new Filter().setPerson(person)).size()>0;
+        return studentDAO.list(new Filter().setPerson(person)).size()>0;
     }
 
     @Override

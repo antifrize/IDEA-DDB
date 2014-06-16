@@ -32,17 +32,17 @@ public class SQLHelper {
             }
             criteria+=String.format("person.person_id = %s.%s_id and",invoker,invoker);
         }
-        if(filter.getStudent()!=null){
+        if(filter.list()!=null){
             query+=", student";
-            Student student = filter.getStudent();
+            Student student = filter.list();
             if(student.getId()!=null){
                 criteria+=String.format("student.student_id=%s and",student.getId());
             }
             criteria+=String.format("student.student_id = %s.%student_id and",invoker,invoker);
         }
-        if(filter.getInstructor()!=null){
+        if(filter.list()!=null){
             query+=", instructor";
-            Instructor instructor = filter.getInstructor();
+            Instructor instructor = filter.list();
             if(instructor.getId()!=null){
                 criteria+=String.format("instructor.instructor_id=%s and",instructor.getId());
             }
@@ -57,7 +57,7 @@ public class SQLHelper {
             if(schedule.getId()!=null){
                 criteria+=String.format("schedule.schedule_id=%s and",schedule.getId());
             }
-            if(schedule.get()!=null){
+            if(schedule.list()!=null){
                 criteria+=String.format("schedule.schedule_id=%s and",schedule.getId());ye n
             }
             if(schedule.getId()!=null){

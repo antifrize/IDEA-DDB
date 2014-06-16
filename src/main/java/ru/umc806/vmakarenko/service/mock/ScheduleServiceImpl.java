@@ -3,21 +3,14 @@ package ru.umc806.vmakarenko.service.mock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import ru.umc806.vmakarenko.dao.ScheduleDAO;
-import ru.umc806.vmakarenko.dao.mock.NamingFactory;
-import ru.umc806.vmakarenko.domain.Instructor;
 import ru.umc806.vmakarenko.domain.Schedule;
-import ru.umc806.vmakarenko.domain.Student;
 import ru.umc806.vmakarenko.service.ScheduleService;
 import ru.umc806.vmakarenko.util.Filter;
 import ru.umc806.vmakarenko.util.RoleService;
 import ru.umc806.vmakarenko.util.ScheduleException;
 
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -39,7 +32,7 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Override
     public List<Schedule> getSchedules(Filter filter) {
-        return scheduleDAO.getSchedulesList(filter);
+        return scheduleDAO.list(filter);
     }
 
     @Override
@@ -49,7 +42,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         // check if student have no lessons
         Filter filter = new Filter();
         filter.setStudent(schedule.getStudent());
-        List<Schedule> studentLessons = scheduleDAO.getSchedulesList(filter);
+        List<Schedule> studentLessons = scheduleDAO.list(filter);
         for(Schedule lesson: studentLessons){
             if(schedule.getFrom()!=null && schedule.getFrom().before(lesson.getFrom())){
                 if(schedule.getTo()!=null && schedule.getTo().after(lesson.getTo())){
@@ -68,7 +61,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         // check if instructor is free
         filter = new Filter();
         filter.setInstructor(schedule.getInstructor());
-        List<Schedule> instructorLessons = scheduleDAO.getSchedulesList(filter);
+        List<Schedule> instructorLessons = scheduleDAO.list(filter);
         for(Schedule lesson: instructorLessons){
             if(schedule.getFrom()!=null && schedule.getFrom().before(lesson.getFrom())){
                 if(schedule.getTo()!=null && schedule.getTo().after(lesson.getTo())){
@@ -87,7 +80,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         // check if plane is free
         filter = new Filter();
         filter.setPlane(schedule.getPlane());
-        List<Schedule> planeLessons = scheduleDAO.getSchedulesList(filter);
+        List<Schedule> planeLessons = scheduleDAO.list(filter);
         for(Schedule lesson: studentLessons){
             if(schedule.getFrom()!=null && schedule.getFrom().before(lesson.getFrom())){
                 if(schedule.getTo()!=null && schedule.getTo().after(lesson.getTo())){

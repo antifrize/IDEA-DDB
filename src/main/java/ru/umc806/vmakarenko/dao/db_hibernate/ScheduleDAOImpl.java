@@ -1,4 +1,4 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -7,37 +7,27 @@ import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import ru.umc806.vmakarenko.dao.ScheduleDAO;
 import ru.umc806.vmakarenko.domain.*;
 import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public class ScheduleDAOImpl implements ScheduleDAO {    @Autowired
-private SessionFactory sessionFactory;
-
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
+public class ScheduleDAOImpl  extends CommonDAOImpl implements ScheduleDAO {    @Autowired
+    private SessionFactory sessionFactory;
     Logger LOG = LoggerFactory.getLogger(ScheduleDAOImpl.class);
 
     @Override
-    public List<Schedule> getSchedulesList() {
-        return getSchedulesList(new Filter());
+    public List<Schedule> list() {
+        return list(new Filter());
     }
 
     @Override
-    public List<Schedule> getSchedulesList(Filter filter) {
+    public List<Schedule> list(Filter filter) {
         Session session = sessionFactory.getCurrentSession();
 
         Criteria criteria = session.createCriteria(Schedule.class,"schedule");
-        LOG.debug("gonna get schedules");
+        LOG.debug("gonna list schedules");
         if(filter.getSchedule()!=null){
             LOG.debug("filter by schedule");
             Schedule schedule = filter.getSchedule();
@@ -111,26 +101,6 @@ private SessionFactory sessionFactory;
         LOG.debug("returning schedule list");
 
         return criteria.list();
-    }
-
-    @Override
-    public Schedule getSchedule(Schedule schedule) {
-        return null;
-    }
-
-    @Override
-    public boolean add(Schedule schedule) {
-        sessionFactory.getCurrentSession().save(schedule);
-        return true;
-    }
-    @Override
-    public boolean delete(Filter filter) {
-        List<Schedule> scheduleList = getSchedulesList(filter);
-        if(scheduleList.size()<1){
-            return false;
-        }
-        sessionFactory.getCurrentSession().delete(scheduleList.get(0));
-        return true;
     }
 
 }

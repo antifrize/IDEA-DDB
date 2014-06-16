@@ -13,6 +13,8 @@ public class Instructor {
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "person_id",referencedColumnName = "person_id")
     private Person person;
+    @Column(name = "approved")
+    private String approved;
 
     @Column(name="instr_license")
     private String license;
@@ -35,6 +37,13 @@ public class Instructor {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+    public boolean isApproved() {
+        return "Y".equalsIgnoreCase(approved);
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved?"Y":"N";
+    }
 
 
 }

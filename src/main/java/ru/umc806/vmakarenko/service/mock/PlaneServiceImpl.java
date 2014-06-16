@@ -27,11 +27,11 @@ public class PlaneServiceImpl implements PlaneService {
 
     @Override
     public List<Plane> getAll() {
-        return planeDAO.getAll();
+        return planeDAO.list();
     }
 
     @Override
     public List<Plane> getPlanes(Filter filter) {
-        return planeDAO.getPlanes(filter);
+        return planeDAO.list(filter);
     }
 }

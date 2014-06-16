@@ -19,6 +19,15 @@
     <bean id="roleService" class="ru.umc806.vmakarenko.util.RoleService" />
     <bean id="blacklistService" class="ru.umc806.vmakarenko.service.mock.BlacklistServiceImpl" />
 
+    <bean id="instructorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.InstructorDAOImpl"/>
+    <bean id="studentDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.StudentDAOImpl"/>
+    <bean id="scheduleDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.ScheduleDAOImpl"/>
+    <bean id="personDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PersonDAOImpl"/>
+    <bean id="loginDAO" class="ru.umc806.vmakarenko.dao.mock.LoginDAOImpl"/>
+    <bean id="planeDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PlaneDAOImpl"/>
+    <bean id="blacklistDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.BlacklistDAOImpl"/>
+    <bean id="commonDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.CommonDAOImpl"/>
+
     <bean id="instructorPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.InstructorPropertyEditor"/>
     <bean id="planePropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.PlanePropertyEditor"/>
     <bean id="studentPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.StudentPropertyEditor"/>

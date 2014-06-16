@@ -1,4 +1,4 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -14,25 +14,17 @@ import java.util.List;
 /**
  * Created by VMakarenko on 5/25/14.
  */
-public class PersonDAOImpl implements PersonDAO {
+public class PersonDAOImpl  extends CommonDAOImpl implements PersonDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-    
     @Override
-    public List<Person> getPersonsList() {
-        return getPersonsList(new Filter());
+    public List<Person> list() {
+        return list(new Filter());
     }
 
     @Override
-    public List<Person> getPersonsList(Filter filter) {
+    public List<Person> list(Filter filter) {
         Session session = sessionFactory.getCurrentSession();
         Criteria criteria = session.createCriteria(Person.class,"person");
         if(filter.getPerson()!=null){
@@ -56,8 +48,4 @@ public class PersonDAOImpl implements PersonDAO {
         return criteria.list();
     }
 
-    @Override
-    public Person getPerson(Person person) {
-        return null;
-    }
 }

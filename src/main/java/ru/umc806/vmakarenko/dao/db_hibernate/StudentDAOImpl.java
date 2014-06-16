@@ -1,4 +1,4 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -12,24 +12,17 @@ import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public class StudentDAOImpl implements StudentDAO {
+public class StudentDAOImpl extends CommonDAOImpl implements StudentDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
     @Override
-    public List<Student> getStudentsList() {
-        return getStudentsList(new Filter());
+    public List<Student> list() {
+        return list(new Filter());
     }
 
     @Override
-    public List<Student> getStudentsList(Filter filter) {
+    public List<Student> list(Filter filter) {
         Session session =sessionFactory.getCurrentSession();
 
         Criteria criteria = session.createCriteria(Student.class,"student");
@@ -62,17 +55,14 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public Student getStudent(int id) {
-        return null;
-    }
-
-    @Override
-    public boolean deleteStudent(int id) {
-        return false;
-    }
-
-    @Override
-    public boolean addStudent(Student student) {
-        return false;
+    public Student get(int id) {
+        Student student = new Student();
+        student.setId(id);
+        List<Student> list = list(new Filter().setStudent(student));
+        if(list.isEmpty()){
+            return null;
+        }else{
+            return list.get(0);
+        }
     }
 }

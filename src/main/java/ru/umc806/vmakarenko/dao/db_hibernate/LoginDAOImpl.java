@@ -1,4 +1,4 @@
-package ru.umc806.vmakarenko.dao.db;
+package ru.umc806.vmakarenko.dao.db_hibernate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.umc806.vmakarenko.dao.LoginDAO;
@@ -8,7 +8,9 @@ import ru.umc806.vmakarenko.domain.Person;
 /**
  * Created by VMakarenko on 5/22/14.
  */
-public class LoginDAOImpl implements LoginDAO {
+
+// TODO what is the reason for that class???
+public class LoginDAOImpl  extends CommonDAOImpl implements LoginDAO {
     @Autowired
     PersonDAO personDAO;
     @Override

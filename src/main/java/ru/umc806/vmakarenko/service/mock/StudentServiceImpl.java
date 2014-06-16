@@ -22,28 +22,49 @@ public class StudentServiceImpl implements StudentService {
     @Resource(name = "instructorDAO")
     private InstructorDAO instructorDAO;
 
+    @Override
     public List<Student> getAll(){
-        return studentDAO.getStudentsList();
+        return studentDAO.list();
     }
 
+    @Override
     public Instructor getPreferredInstructor(Student student){
         return null;
     }
 
+    @Override
     public List<Instructor> getBlacklisted(Student student){
         return null;
     }
 
+    @Override
     public Instructor getInstructorBySchedule(Schedule schedule){
         return null;
     }
 
+    @Override
     public List<Schedule> getPreferredSchedules(){
         return null;
     }
 
+    @Override
     public List<Student> getStudent(Filter filter){
-        return studentDAO.getStudentsList(filter);
+        return studentDAO.list(filter);
+    }
+
+    @Override
+    public List<Student> getUnapproved() {
+        Student student = new Student();
+        student.setApproved(true);
+        return studentDAO.list(new Filter().setStudent(student));
+    }
+
+    @Override
+    public boolean approve(String id) {
+        Student student = studentDAO.get(Integer.parseInt(id));
+        student.setApproved(true);
+        studentDAO.update(student);
+        return true;
     }
 }
 

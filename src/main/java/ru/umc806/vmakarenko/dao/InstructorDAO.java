@@ -7,7 +7,8 @@ import ru.umc806.vmakarenko.domain.Student;
 import ru.umc806.vmakarenko.util.Filter;
 
 public interface InstructorDAO {
-	public List<Instructor> getInstructorsList();
-    public List<Instructor> getInstructorsList(Filter filter);
-    public Instructor getInstructor(Student student);
+	public List<Instructor> list();
+    public List<Instructor> list(Filter filter);
+
+    public Instructor get(int id);
 }

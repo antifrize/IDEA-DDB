@@ -11,8 +11,10 @@ public class Student {
     @SequenceGenerator(name = "student_seq_gen",sequenceName = "student_seq")
     private Integer id;
     @OneToOne(fetch = FetchType.EAGER, optional = false)
-   @JoinColumn(name = "person_id", referencedColumnName = "person_id")
+    @JoinColumn(name = "person_id", referencedColumnName = "person_id")
     private Person person;
+    @Column(name="approved")
+    private String approved;
     //TODO @Column(name = "graduated")
     @Transient
     private boolean graduated;
@@ -34,5 +36,12 @@ public class Student {
 	public void setGraduated(boolean graduated) {
 		this.graduated = graduated;
 	}
-	
+    public boolean isApproved() {
+        return "Y".equalsIgnoreCase(approved);
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved?"Y":"N";
+    }
+
 }
