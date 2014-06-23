@@ -8,13 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ru.umc806.vmakarenko.dao.StudentDAO;
 import ru.umc806.vmakarenko.domain.Student;
 import ru.umc806.vmakarenko.domain.Person;
+import ru.umc806.vmakarenko.exceptions.CannotAddException;
 import ru.umc806.vmakarenko.util.Filter;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class StudentDAOImpl extends CommonDAOImpl implements StudentDAO {
+public class StudentDAOImpl extends CommonDAOImpl<Student> implements StudentDAO {
     @Autowired
     private SessionFactory sessionFactory;
+
+    public StudentDAOImpl(){
+        super(Student.class);
+    }
 
     @Override
     public List<Student> list() {

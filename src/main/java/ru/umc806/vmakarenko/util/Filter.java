@@ -11,6 +11,16 @@ public class Filter {
     private Student student;
     private Schedule schedule;
     private Person person;
+    private Administrator administrator;
+
+    public Administrator getAdministrator() {
+        return administrator;
+    }
+
+    public Filter setAdministrator(Administrator administrator) {
+        this.administrator = administrator;
+        return this;
+    }
 
     public Plane getPlane() {
         return plane;

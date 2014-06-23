@@ -13,10 +13,13 @@ import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public class ScheduleDAOImpl  extends CommonDAOImpl implements ScheduleDAO {    @Autowired
+public class ScheduleDAOImpl  extends CommonDAOImpl<Schedule> implements ScheduleDAO {    @Autowired
     private SessionFactory sessionFactory;
     Logger LOG = LoggerFactory.getLogger(ScheduleDAOImpl.class);
 
+    public ScheduleDAOImpl(){
+        super(Schedule.class);
+    }
     @Override
     public List<Schedule> list() {
         return list(new Filter());

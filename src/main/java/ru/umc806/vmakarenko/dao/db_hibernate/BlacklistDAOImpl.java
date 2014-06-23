@@ -15,10 +15,13 @@ import java.util.List;
 /**
  * Created by VMakarenko on 6/15/14.
  */
-public class BlacklistDAOImpl  extends CommonDAOImpl implements BlacklistDAO{
+public class BlacklistDAOImpl  extends CommonDAOImpl<Blacklist> implements BlacklistDAO{
     Logger LOG = LoggerFactory.getLogger(BlacklistDAOImpl.class);
     @Autowired
     private SessionFactory sessionFactory;
+    public BlacklistDAOImpl(){
+        super(Blacklist.class);
+    }
 
     @Override
     public Blacklist get(String id) {

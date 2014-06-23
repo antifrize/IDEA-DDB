@@ -27,6 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="IDEA-DDB" target="1.7" />
+      <module name="IDEA-DDB (1)" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

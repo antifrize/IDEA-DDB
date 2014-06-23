@@ -15,6 +15,10 @@ public class PlaneDAOImpl  extends CommonDAOImpl implements PlaneDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
+    public PlaneDAOImpl(){
+        super(Plane.class);
+    }
+
     @Override
     public List<Plane> list() {
         return list(new Filter());

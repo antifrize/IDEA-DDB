@@ -66,3 +66,26 @@
 .scheduleItems{
 
 }
+
+
+.button{
+    background-color: #cfcfff;
+    line-height: 1;
+    border-radius: 5px;
+    margin:2px;
+    text-decoration:none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1px;
+    color:#fff;
+    cursor:pointer;
+    width:100%;
+}
+
+.bordered{
+    border: 2px;
+    width: 100%;
+}

@@ -44,16 +44,6 @@
         >
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean-->
-
-    <!-- Hibernate session factory -->
-    <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-        <property name="username" value="TAILWHEELS" />
-        <property name="password" value="123456" />
-    </bean>
-
     <bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
@@ -64,6 +54,7 @@
                 <value>ru.umc806.vmakarenko.domain.Plane</value>
                 <value>ru.umc806.vmakarenko.domain.Student</value>
                 <value>ru.umc806.vmakarenko.domain.Administrator</value>
+                <value>ru.umc806.vmakarenko.domain.Blacklist</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -74,10 +65,32 @@
         </property>
     </bean>
 
+    <bean id="instructorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.InstructorDAOImpl"/>
+    <bean id="studentDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.StudentDAOImpl"/>
+    <bean id="scheduleDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.ScheduleDAOImpl"/>
+    <bean id="personDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PersonDAOImpl"/>
+    <bean id="planeDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PlaneDAOImpl"/>
+    <bean id="blacklistDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.BlacklistDAOImpl"/>
+    <bean id="administratorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.AdministratorDAOImpl"/>
+
+
+
+    <!-- Hibernate session factory -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="username" value="TAILWHEELS" />
+        <property name="password" value="123456" />
+    </bean>
+
+
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate4.HibernateTransactionManager"
           p:sessionFactory-ref="mySessionFactory" />
 
     <tx:annotation-driven/>
+
+
 
 </beans>

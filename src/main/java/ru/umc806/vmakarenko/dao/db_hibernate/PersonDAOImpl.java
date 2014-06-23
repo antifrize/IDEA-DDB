@@ -14,9 +14,13 @@ import java.util.List;
 /**
  * Created by VMakarenko on 5/25/14.
  */
-public class PersonDAOImpl  extends CommonDAOImpl implements PersonDAO {
+public class PersonDAOImpl  extends CommonDAOImpl<Person> implements PersonDAO {
     @Autowired
     private SessionFactory sessionFactory;
+
+    public PersonDAOImpl(){
+        super(Person.class);
+    }
 
     @Override
     public List<Person> list() {

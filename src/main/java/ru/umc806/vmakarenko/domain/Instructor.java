@@ -22,27 +22,31 @@ public class Instructor {
 	public String getLicense() {
 		return license;
 	}
-	public void setLicense(String license) {
+	public Instructor setLicense(String license) {
 		this.license = license;
+        return this;
 	}
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public Instructor setId(Integer id) {
 		this.id = id;
+        return this;
 	}
 	public Person getPerson() {
 		return person;
 	}
-	public void setPerson(Person person) {
+	public Instructor setPerson(Person person) {
 		this.person = person;
+        return this;
 	}
     public boolean isApproved() {
         return "Y".equalsIgnoreCase(approved);
     }
 
-    public void setApproved(boolean approved) {
+    public Instructor setApproved(boolean approved) {
         this.approved = approved?"Y":"N";
+        return this;
     }
 
 

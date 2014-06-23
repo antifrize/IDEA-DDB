@@ -14,30 +14,30 @@
 
 
 <div class="menuItem">
-    <a href="/cabinet">Cabinet</a>
+    <a href="/cabinet/cabinet">Cabinet</a>
 </div>
 
 <sec:authorize access="isAuthenticated()">
     <sec:authorize access="hasRole('ROLE_STUDENT')">
         <div class="menuItem">
-            <a href="/request">Lesson request</a>
+            <a href="/cabinet/request">Lesson request</a>
         </div>
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_ADMIN')">
         <div class="menuItem">
-            <a href="/stats">Statistics</a>
+            <a href="/cabinet/stats">Statistics</a>
         </div>
         <div class="menuItem">
-            <a href="/approve">Approvance</a>
+            <a href="/cabinet/approve">Approvance</a>
         </div>
     </sec:authorize>
 
     <div class="menuItem">
-        <a href="/schedule">Schedule</a>
+        <a href="/cabinet/schedule">Schedule</a>
     </div>
 
     <div class="menuItem">
-        <a href="/logout">Logout</a>
+        <a href="/cabinet/logout">Logout</a>
     </div>
 
 </sec:authorize>

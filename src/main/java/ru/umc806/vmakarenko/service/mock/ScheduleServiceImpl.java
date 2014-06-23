@@ -96,12 +96,16 @@ public class ScheduleServiceImpl implements ScheduleService {
             }
         }
         LOG.debug("no problems with plane");
-        return scheduleDAO.add(schedule);
+        scheduleDAO.insert(schedule);
+        return true;
     }
+
     @Transactional
     @Override
     public boolean delete(Filter filter) {
-        return scheduleDAO.delete(filter);
+        // FIXME
+        //return scheduleDAO.delete(filter);
+        return true;
     }
 
 }

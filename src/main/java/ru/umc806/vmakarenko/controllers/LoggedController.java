@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ru.umc806.vmakarenko.domain.Instructor;
-import ru.umc806.vmakarenko.domain.Plane;
-import ru.umc806.vmakarenko.domain.Schedule;
-import ru.umc806.vmakarenko.domain.Student;
+import ru.umc806.vmakarenko.domain.*;
+import ru.umc806.vmakarenko.exceptions.NoSuchPersonException;
 import ru.umc806.vmakarenko.propertyEditor.InstructorPropertyEditor;
 import ru.umc806.vmakarenko.propertyEditor.PlanePropertyEditor;
 import ru.umc806.vmakarenko.propertyEditor.StudentPropertyEditor;
@@ -34,15 +32,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class CommonController {
-    private Logger LOG = LoggerFactory.getLogger(CommonController.class);
+@RequestMapping(value = "cabinet/")
+public class LoggedController {
+    private Logger LOG = LoggerFactory.getLogger(LoggedController.class);
 
     @Autowired
     private InstructorService instructorService;
     @Autowired
     private StudentService studentService;
     @Autowired
-    private MenuService menu;
+    private PersonService personService;
     @Autowired
     private ScheduleService scheduleService;
     @Autowired
@@ -91,52 +90,14 @@ public class CommonController {
     }
 
 
-	@RequestMapping(method = RequestMethod.GET,value="hello")
-	public String printWelcome(ModelMap model) {
-        ModelAndView mav = new ModelAndView("hello");
-        mav.addObject("menuList", menu.getMenuList());
-		return "hello";
-	}
-    @RequestMapping(method = RequestMethod.GET,value="login")
-     public String login(ModelMap model) {
-        model.addAttribute("message", "Hello world!");
-        return "login";
-    }
-    @RequestMapping(method = RequestMethod.GET,value="register")
-    public String register(ModelMap model) {
-        model.addAttribute("message", "Hello world!");
-        return "cabinet-register";
-    }
-
-    @RequestMapping(method = RequestMethod.GET,value="instructors")
-    public ModelAndView getInstructorsList(ModelMap model) {
-        LOG.debug("list instructorService list");
-        ModelAndView mav = new ModelAndView("instructors-list");
-        mav.addObject("instructors", instructorService.getAll());
-        return mav;
-    }
-    @RequestMapping(method = RequestMethod.GET,value="students")
-    public ModelAndView getStudentsList(ModelMap model) {
-        LOG.debug("list students list");
-        ModelAndView mav = new ModelAndView("students-list");
-        mav.addObject("students", studentService.getAll());
-        return mav;
-    }
-    @RequestMapping(method = RequestMethod.GET,value="planes")
-    public ModelAndView getPlanesList(ModelMap model) {
-        LOG.debug("list planes list");
-        ModelAndView mav = new ModelAndView("planes-list");
-        mav.addObject("planes", planeService.getAll());
-        return mav;
-    }
 
     @RequestMapping(method = RequestMethod.GET,value="cabinet")
-    public ModelAndView cabinetMain(Model model, Principal principal) {
+    public ModelAndView cabinetMain(Model model, Principal principal) throws NoSuchPersonException {
         LOG.debug("open cabinet");
         String username = principal.getName();
-        LOG.debug("username = "+username);
         ModelAndView mav = new ModelAndView("cabinet-main");
-        mav.addObject("username",username);
+        Person person = personService.getOne(new Filter().setPerson(new Person().setLogin(username)));
+        mav.addObject("person",person);
         return mav;
     }
 
@@ -149,6 +110,14 @@ public class CommonController {
         return mav;
     }
 
+    @RequestMapping(method = RequestMethod.GET,value="students")
+    public ModelAndView students(Principal principal) {
+        LOG.debug("open students");
+        ModelAndView mav = new ModelAndView("cabinet-mystudents");
+        mav.addObject("students", studentService.getBlacklisted(roleService.getPerson(principal.getName()),false));
+        mav.addObject("studentsBlacklisted", studentService.getBlacklisted(roleService.getPerson(principal.getName()), true));
+        return mav;
+    }
 
     @RequestMapping(value = "request", method = RequestMethod.GET)
     public ModelAndView request( ) {

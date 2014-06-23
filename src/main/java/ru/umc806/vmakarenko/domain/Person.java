@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="person")
 public class Person {
     @Id
-    @Column(name=";")
+    @Column(name="person_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "person_seq_gen")
     @SequenceGenerator(name = "person_seq_gen",sequenceName = "person_seq")
     private Integer id;
@@ -25,43 +25,50 @@ public class Person {
 	public String getLogin() {
 		return login;
 	}
-	public void setLogin(String login) {
+	public Person setLogin(String login) {
 		this.login = login;
+        return this;
 	}
 	public String getPass_hash() {
 		return pass_hash;
 	}
-	public void setPass_hash(String pass_hash) {
+	public Person setPass_hash(String pass_hash) {
 		this.pass_hash = pass_hash;
+        return this;
 	}
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public Person setId(Integer id) {
 		this.id = id;
+        return this;
 	}
 	public String getPassport() {
 		return passport;
 	}
-	public void setPassport(String passport) {
+	public Person setPassport(String passport) {
 		this.passport = passport;
+        return this;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public Person setName(String name) {
 		this.name = name;
+        return this;
 	}
 	public String getSurname() {
 		return surname;
 	}
-	public void setSurname(String surname) {
+	public Person setSurname(String surname) {
 		this.surname = surname;
+        return this;
 	}
 	public String getLastname() {
 		return lastname;
 	}
-	public void setLastname(String lastname) {
+	public Person setLastname(String lastname) {
 		this.lastname = lastname;
+        return this;
 	}
    }

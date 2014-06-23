@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import ru.umc806.vmakarenko.dao.CommonDAO;
+import ru.umc806.vmakarenko.exceptions.CannotAddException;
 import ru.umc806.vmakarenko.util.Filter;
 
 import java.io.Serializable;
@@ -25,12 +26,12 @@ public abstract class CommonDAOImpl<E> implements CommonDAO<E>{
     }
 
     @Override
-    public int insert(E entity) {
+    public Integer insert(E entity){
         Serializable serializable = getSession().save(entity);
         if(serializable instanceof Integer){
             return (Integer)serializable;
         }else{
-            return 0;
+            return null;
         }
     }
 
@@ -65,7 +66,7 @@ public abstract class CommonDAOImpl<E> implements CommonDAO<E>{
         return new ArrayList<>();
     }
 
-    private Session getSession(){
+    protected Session getSession(){
         return sessionFactory.getCurrentSession();
     }
 }

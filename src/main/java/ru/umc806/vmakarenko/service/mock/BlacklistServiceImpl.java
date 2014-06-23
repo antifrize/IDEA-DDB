@@ -37,6 +37,6 @@ public class BlacklistServiceImpl implements BlacklistService {
 
     @Override
     public boolean isBlacklisted(int id) {
-        return isBlacklisted(personDAO.get(id));;
+        return isBlacklisted(personDAO.get(id));
     }
 }

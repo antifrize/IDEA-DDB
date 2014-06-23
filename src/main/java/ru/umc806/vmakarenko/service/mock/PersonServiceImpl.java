@@ -3,13 +3,21 @@ package ru.umc806.vmakarenko.service.mock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import ru.umc806.vmakarenko.dao.AdministratorDAO;
 import ru.umc806.vmakarenko.dao.InstructorDAO;
+import ru.umc806.vmakarenko.dao.PersonDAO;
 import ru.umc806.vmakarenko.dao.StudentDAO;
+import ru.umc806.vmakarenko.domain.Administrator;
+import ru.umc806.vmakarenko.domain.Instructor;
 import ru.umc806.vmakarenko.domain.Person;
+import ru.umc806.vmakarenko.domain.Student;
+import ru.umc806.vmakarenko.exceptions.CannotAddException;
+import ru.umc806.vmakarenko.exceptions.NoSuchPersonException;
 import ru.umc806.vmakarenko.service.PersonService;
 import ru.umc806.vmakarenko.util.Filter;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * Created by VMakarenko on 5/22/14.
@@ -20,9 +28,13 @@ public class PersonServiceImpl implements PersonService {
 
     Logger LOG = LoggerFactory.getLogger(PersonServiceImpl.class);
     @Autowired
+    InstructorDAO instructorDAO;
+    @Autowired
     StudentDAO studentDAO;
     @Autowired
-    InstructorDAO instructorDAO;
+    PersonDAO personDAO;
+    @Autowired
+    AdministratorDAO administratorDAO;
 
     @Override
     public boolean isInstructor(Person person) {
@@ -44,7 +56,8 @@ public class PersonServiceImpl implements PersonService {
         LOG.debug("isInstructor?");
         Person person = new Person();
         person.setLogin(username);
-        return instructorDAO.list(new Filter().setPerson(person)).size()>0;
+        List<Instructor> list = instructorDAO.list(new Filter().setPerson(person));
+        return !list.isEmpty() && list.get(0).isApproved();
     }
 
     @Override
@@ -52,7 +65,8 @@ public class PersonServiceImpl implements PersonService {
         LOG.debug("isStudent?");
         Person person = new Person();
         person.setLogin(username);
-        return studentDAO.list(new Filter().setPerson(person)).size()>0;
+        List<Student> list =  studentDAO.list(new Filter().setPerson(person));
+        return !list.isEmpty() && list.get(0).isApproved();
     }
 
     @Override
@@ -60,7 +74,35 @@ public class PersonServiceImpl implements PersonService {
         LOG.debug("isAdmin?");
         Person person = new Person();
         person.setLogin(username);
-        return false;
+        List<Administrator> list =  administratorDAO.list(new Filter().setPerson(person));
+        return !list.isEmpty();
+    }
+
+    @Override
+    public void addPerson(Person person) throws CannotAddException {
+        if(personDAO.insert(person)==null){
+            throw new CannotAddException("Error adding person!");
+        }
+    }
+
+    @Override
+    public Person getOne(Filter filter) throws NoSuchPersonException {
+        List<Person> personList = personDAO.list(filter);
+        if(!personList.isEmpty()){
+            return personList.get(0);
+        }else{
+            throw new NoSuchPersonException();
+        }
+    }
+
+    @Override
+    public List<Person> get(Filter filter) throws NoSuchPersonException {
+        List<Person> personList = personDAO.list(filter);
+        if(!personList.isEmpty()){
+            return personList;
+        }else{
+            throw new NoSuchPersonException();
+        }
     }
 
     public StudentDAO getStudentDAO() {

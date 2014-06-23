@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by VMakarenko on 6/15/14.
  */
-public interface BlacklistDAO {
+public interface BlacklistDAO extends CommonDAO<Blacklist> {
     public Blacklist get(String id);
     public List<Blacklist> list(Person blocker, Person blocked);
     public void insert(Person blocker,Person blocked);

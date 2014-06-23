@@ -68,24 +68,20 @@ public class MyJdbcDAOImpl extends JdbcDaoImpl {
     protected List<GrantedAuthority> loadUserAuthorities(String username) {
         LOG.debug("Get user authorities");
         List<GrantedAuthority> list = new ArrayList<>();
-        boolean isPresent = false;
         try{
             if(personService.isAdmin(username)){
                 list.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-                isPresent = true;
                 LOG.debug("admin");
             }
             if(personService.isInstructor(username)){
                 list.add(new SimpleGrantedAuthority("ROLE_INSTRUCTOR"));
-                isPresent = true;
                 LOG.debug("instructor");
             }
             if(personService.isStudent(username)){
                 list.add(new SimpleGrantedAuthority("ROLE_STUDENT"));
-                isPresent = true;
                 LOG.debug("student");
             }
-            if(isPresent){
+            if(!sessionFactory.openSession().createCriteria(Person.class).add(Restrictions.eq("login",username)).list().isEmpty()){
                 list.add(new SimpleGrantedAuthority("ROLE_LOGGED"));
             }
         }catch (Exception e){

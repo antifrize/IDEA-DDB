@@ -11,11 +11,13 @@ import ru.umc806.vmakarenko.dao.InstructorDAO;
 import ru.umc806.vmakarenko.domain.Instructor;
 import ru.umc806.vmakarenko.domain.Person;
 import ru.umc806.vmakarenko.domain.Student;
+import ru.umc806.vmakarenko.exceptions.CannotAddException;
 import ru.umc806.vmakarenko.util.Filter;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class InstructorDAOImpl  extends CommonDAOImpl implements InstructorDAO {
+public class InstructorDAOImpl  extends CommonDAOImpl<Instructor> implements InstructorDAO {
     Logger LOG = LoggerFactory.getLogger(InstructorDAOImpl.class);
     @Autowired
     private SessionFactory sessionFactory;
@@ -27,6 +29,7 @@ public class InstructorDAOImpl  extends CommonDAOImpl implements InstructorDAO {
     public List<Instructor> list() {
         return list(new Filter());
     }
+
 
     @Override
     public List<Instructor> list(Filter filter) {
@@ -50,7 +53,7 @@ public class InstructorDAOImpl  extends CommonDAOImpl implements InstructorDAO {
             criteria.createAlias("instructor.person","person");
             Person person = filter.getPerson();
             if(person.getId()!=null){
-                criteria.add(Restrictions.eq("person.person_id",person.getId()));
+                criteria.add(Restrictions.eq("person.id",person.getId()));
             }
             if(person.getName()!=null){
                 criteria.add(Restrictions.eq("person.name",person.getName()));

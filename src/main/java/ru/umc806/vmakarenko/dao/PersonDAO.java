@@ -6,7 +6,7 @@ import ru.umc806.vmakarenko.util.Filter;
 
 import java.util.List;
 
-public interface PersonDAO {
+public interface PersonDAO  extends CommonDAO<Person>{
 	public List<Person> list();
     public List<Person> list(Filter filter);
 }

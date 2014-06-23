@@ -19,19 +19,19 @@ public class MenuServiceImpl implements MenuService {
         LOG.debug("getMenuList()");
         List<Menu> menuList = new ArrayList<>();
         if(roleService.isLogged()){
-            menuList.add(new Menu("Schedule","schedule"));
+            menuList.add(new Menu("Schedule","cabinet/schedule"));
             if(roleService.isStudent()){
                 menuList.add(new Menu("Instructors","instructors"));
             }
             if(roleService.isInstructor()){
-                menuList.add(new Menu("My students","students"));
-                menuList.add(new Menu("My time","time_select"));
+                menuList.add(new Menu("My students","cabinet/students"));
+            //    menuList.add(new Menu("My time","cabinet/time_select"));
             }
             if(roleService.isAdministrator()){
-                menuList.add(new Menu("Statistics","statistics"));
+                menuList.add(new Menu("Statistics","cabinet/statistics"));
             }
-            menuList.add(new Menu("Logout", "logout"));
-            menuList.add(new Menu("Change password","changePass"));
+            menuList.add(new Menu("Logout", "cabinet/logout"));
+            menuList.add(new Menu("Change password","cabinet/changePass"));
         }else{
             menuList.add(new Menu("Our students","students"));
             menuList.add(new Menu("Our instructors","instructors"));

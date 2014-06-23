@@ -2,11 +2,14 @@ package ru.umc806.vmakarenko.service.mock;
 
 import org.springframework.transaction.annotation.Transactional;
 import ru.umc806.vmakarenko.dao.InstructorDAO;
+import ru.umc806.vmakarenko.dao.PersonDAO;
 import ru.umc806.vmakarenko.dao.ScheduleDAO;
 import ru.umc806.vmakarenko.dao.StudentDAO;
 import ru.umc806.vmakarenko.domain.Instructor;
+import ru.umc806.vmakarenko.domain.Person;
 import ru.umc806.vmakarenko.domain.Schedule;
 import ru.umc806.vmakarenko.domain.Student;
+import ru.umc806.vmakarenko.exceptions.CannotAddException;
 import ru.umc806.vmakarenko.service.InstructorService;
 import ru.umc806.vmakarenko.util.Filter;
 
@@ -24,6 +27,8 @@ public class InstructorServiceImpl implements InstructorService {
     private StudentDAO studentDAO;
     @Resource(name="scheduleDAO")
     private ScheduleDAO scheduleDAO;
+    @Resource(name="personDAO")
+    private PersonDAO personDAO;
     @Transactional
     public List<Instructor> getAll(){
         return instructorDAO.list();
@@ -74,5 +79,20 @@ public class InstructorServiceImpl implements InstructorService {
         instructor.setApproved(true);
         instructorDAO.update(instructor);
         return true;
+    }
+
+    @Override
+    public void add(Instructor instructor) throws CannotAddException{
+        if(instructorDAO.list(
+                new Filter().setPerson(
+                        new Person().setId(
+                                instructor.getPerson().getId()
+                        )
+                )
+        ).isEmpty()) {
+            instructorDAO.insert(instructor);
+        }else{
+            throw new CannotAddException("cannot add instructor");
+        }
     }
 }
