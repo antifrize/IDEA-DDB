@@ -8,7 +8,7 @@ public class Instructor {
     @Id
     @Column(name="instr_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "instr_seq_gen")
-    @SequenceGenerator(name = "instr_seq_gen",sequenceName = "instr_seq")
+    @SequenceGenerator(name = "instr_seq_gen",sequenceName = "instructor_seq")
     private Integer id;
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "person_id",referencedColumnName = "person_id")
@@ -40,11 +40,11 @@ public class Instructor {
 		this.person = person;
         return this;
 	}
-    public boolean isApproved() {
-        return "Y".equalsIgnoreCase(approved);
+    public Boolean isApproved() {
+        return approved==null?null:approved==null?null:"Y".equalsIgnoreCase(approved);
     }
 
-    public Instructor setApproved(boolean approved) {
+    public Instructor setApproved(Boolean approved) {
         this.approved = approved?"Y":"N";
         return this;
     }

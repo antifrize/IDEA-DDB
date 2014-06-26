@@ -17,6 +17,8 @@ import ru.umc806.vmakarenko.service.*;
 import ru.umc806.vmakarenko.util.Filter;
 import ru.umc806.vmakarenko.util.rest.Result;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("rest/")
 public class RestController {
@@ -44,21 +46,32 @@ public class RestController {
         result.setResult("");
         return result;
     }
-    @RequestMapping(value = "approvePerson",method = RequestMethod.DELETE)
-    public @ResponseBody boolean approvePerson(@RequestParam(value = "type",required = true)String type,@RequestParam(value = "id",required = true)String id){
+    @RequestMapping(value = "approve",method = RequestMethod.POST)
+    public @ResponseBody boolean approvePerson(@RequestParam(value = "type",required = true)String type,@RequestParam(value = "id",required = true)Integer id) throws RestException {
         LOG.debug(String.format("rest approve type = %s id = %s", type, id));
-        if(TYPE_STUDENT.equalsIgnoreCase(type)){
-            return studentService.approve(id);
-        }
-        if(TYPE_INSTRUCTOR.equalsIgnoreCase(type)){
-            return instructorService.approve(id);
+        try{
+            if(TYPE_STUDENT.equalsIgnoreCase(type)){
+                List<Student> list = studentService.getStudent(new Filter().setPerson(new Person().setId(id)));
+                return studentService.approve(list.get(0).getId().toString());
+            }
+            if(TYPE_INSTRUCTOR.equalsIgnoreCase(type)){
+                List<Instructor> list = instructorService.getInstructors(new Filter().setPerson(new Person().setId(id)));
+                return instructorService.approve(list.get(0).getId().toString());
+            }
+        }catch(Exception e){
+            throw new RestException(e);
         }
         return false;
+
     }
-    @RequestMapping(value = "blacklistPerson",method = RequestMethod.DELETE)
-    public @ResponseBody boolean blacklistPerson(@RequestParam(value = "type",required = true)String type,@RequestParam(value = "id",required = true)String id){
+    @RequestMapping(value = "blacklist",method = RequestMethod.POST)
+    public @ResponseBody boolean blacklistPerson(@RequestParam(value = "type",required = true)String type,@RequestParam(value = "id",required = true)String id) throws RestException {
         LOG.debug(String.format("rest blacklist type = %s  id = %s",type, id));
-        blacklistService.setBlacklisted(Integer.parseInt(id));
+        try{
+            blacklistService.setBlacklisted(Integer.parseInt(id));
+        }catch(Exception e){
+            throw new RestException(e);
+        }
         return true;
     }
     @RequestMapping(value = "instructor",method = RequestMethod.PUT)

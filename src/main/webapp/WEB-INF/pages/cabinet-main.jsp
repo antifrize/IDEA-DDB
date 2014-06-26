@@ -19,7 +19,7 @@
             type: 'PUT',
             dataType: 'json'
         }).done(function(result){
-                    if(result.success==true){
+                    if(result==true){
                         alert("Request sent. Wait for approvance.");
                     }else{
                         alert("Try again later.");
@@ -35,7 +35,7 @@
             type: 'PUT',
             dataType: 'json'
         }).done(function(result){
-                    if(result.success==true){
+                    if(result==true){
                         alert("Request sent. Wait for approvance.");
                     }else{
                         alert("Try again later.");
@@ -48,7 +48,7 @@
 <div style="width:200px">
     <div class="cool_text">Welcome, ${person.name} ${person.surname}.</div>
     <sec:authentication property="principal.username" var="username" />
-    <sec:authorize access="!hasRole('ROLE_STUDENT')">
+    <sec:authorize access="!(hasRole('ROLE_STUDENT')||hasRole('ROLE_STUDENT_UNAPPROVED'))">
         <div>
             <button id="become_student" class="button" onclick="showHide('become_student_send')">Want to become a student?</button>
         </div>
@@ -56,7 +56,7 @@
             <button style="display:none" id="become_student_send" class="button" onclick="sendStudent('${username}')">Send request.</button>
         </div>
     </sec:authorize>
-    <sec:authorize access="!hasRole('ROLE_INSTRUCTOR')"><sec:authentication property="principal.username" var="username" />
+    <sec:authorize access="!(hasRole('ROLE_INSTRUCTOR')||hasRole('ROLE_INSTRUCTOR_UNAPPROVED'))"><sec:authentication property="principal.username" var="username" />
         <div>
             <button id="become_instructor" class="button" onclick="showHide('become_instructor_send_div');">Want to become an instructor?</button>
         </div>

@@ -35,10 +35,12 @@ public class StudentDAOImpl extends CommonDAOImpl<Student> implements StudentDAO
         if(filter.getStudent()!=null){
             Student student = filter.getStudent();
             if(student.getId()!=null){
-                criteria.add(Restrictions.eq("student_id", student.getId()));
+                criteria.add(Restrictions.eq("id", student.getId()));
             }
-        }
-        if(filter.getPerson()!=null){
+            if(student.isApproved()!=null){
+                criteria.add(Restrictions.eq("approved", student.isApproved()?"Y":"N"));
+            }
+        }if(filter.getPerson()!=null){
             criteria.createAlias("student.person","person");
             Person person = filter.getPerson();
             if(person.getId()!=null){

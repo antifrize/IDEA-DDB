@@ -10,6 +10,7 @@ import ru.umc806.vmakarenko.dao.BlacklistDAO;
 import ru.umc806.vmakarenko.dao.db_jdbc.CommonDAOImpl;
 import ru.umc806.vmakarenko.domain.Blacklist;
 import ru.umc806.vmakarenko.domain.Person;
+import ru.umc806.vmakarenko.exceptions.CannotLockException;
 import ru.umc806.vmakarenko.util.Filter;
 
 import java.sql.ResultSet;
@@ -46,6 +47,21 @@ public class BlacklistDAOImpl  extends CommonDAOImpl<Blacklist> implements Black
     @Override
     public List<Blacklist> list(Filter filter) {
         return null;
+    }
+
+    @Override
+    public void safeUpdate(Blacklist entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(Blacklist entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(int id, Person person) throws CannotLockException {
+
     }
 
 }

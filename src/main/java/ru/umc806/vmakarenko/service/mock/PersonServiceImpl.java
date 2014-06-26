@@ -79,6 +79,22 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    public boolean isUnapprovedInstructor(String username) {
+        Person person = new Person();
+        person.setLogin(username);
+        List<Instructor> list =  instructorDAO.list(new Filter().setPerson(person));
+        return !list.isEmpty();
+    }
+
+    @Override
+    public boolean isUnapprovedStudent(String username) {
+        Person person = new Person();
+        person.setLogin(username);
+        List<Student> list =  studentDAO.list(new Filter().setPerson(person));
+        return !list.isEmpty();
+    }
+
+    @Override
     public void addPerson(Person person) throws CannotAddException {
         if(personDAO.insert(person)==null){
             throw new CannotAddException("Error adding person!");

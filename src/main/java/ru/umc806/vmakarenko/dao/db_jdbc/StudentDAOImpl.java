@@ -10,6 +10,7 @@ import ru.umc806.vmakarenko.dao.db_jdbc.CommonDAOImpl;
 import ru.umc806.vmakarenko.domain.Person;
 import ru.umc806.vmakarenko.domain.Student;
 import ru.umc806.vmakarenko.exceptions.CannotAddException;
+import ru.umc806.vmakarenko.exceptions.CannotLockException;
 import ru.umc806.vmakarenko.util.Filter;
 
 import java.sql.ResultSet;
@@ -29,6 +30,21 @@ public class StudentDAOImpl extends CommonDAOImpl<Student> implements StudentDAO
     @Override
     public List<Student> list(Filter filter) {
         return null;
+    }
+
+    @Override
+    public void safeUpdate(Student entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(Student entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(int id, Person person) throws CannotLockException {
+
     }
 
 

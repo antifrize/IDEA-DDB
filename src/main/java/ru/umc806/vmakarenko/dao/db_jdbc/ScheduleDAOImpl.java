@@ -13,6 +13,7 @@ import ru.umc806.vmakarenko.domain.Instructor;
 import ru.umc806.vmakarenko.domain.Person;
 import ru.umc806.vmakarenko.domain.Schedule;
 import ru.umc806.vmakarenko.domain.Student;
+import ru.umc806.vmakarenko.exceptions.CannotLockException;
 import ru.umc806.vmakarenko.util.Filter;
 
 import java.sql.ResultSet;
@@ -31,6 +32,21 @@ public class ScheduleDAOImpl  extends CommonDAOImpl<Schedule> implements Schedul
     @Override
     public List<Schedule> list(Filter filter) {
         return null;
+    }
+
+    @Override
+    public void safeUpdate(Schedule entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(Schedule entity, Person person) throws CannotLockException {
+
+    }
+
+    @Override
+    public void safeDelete(int id, Person person) throws CannotLockException {
+
     }
 
 }

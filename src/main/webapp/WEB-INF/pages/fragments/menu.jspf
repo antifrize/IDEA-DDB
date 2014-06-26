@@ -17,6 +17,12 @@
     <a href="/cabinet/cabinet">Cabinet</a>
 </div>
 
+<sec:authorize access="!isAuthenticated()">
+<div class="menuItem">
+    <a href="/register">Register</a>
+</div>
+</sec:authorize>
+
 <sec:authorize access="isAuthenticated()">
     <sec:authorize access="hasRole('ROLE_STUDENT')">
         <div class="menuItem">

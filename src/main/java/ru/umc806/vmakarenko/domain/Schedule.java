@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "schedule")
-public class Schedule {
+public class Schedule implements Lockable{
     @Id
     @Column(name="schedule_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "schedule_seq_gen")
@@ -31,6 +31,35 @@ public class Schedule {
     @JoinColumn(name="plane_id",referencedColumnName = "plane_id")
     private Plane plane;
 
+    @Column(name="lock_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Calendar lockTime;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="locker",referencedColumnName = "person_id")
+    private Person locker;
+
+    public Calendar getLockTime() {
+        return lockTime;
+    }
+
+    public void setLockTime(Calendar lockTime) {
+        this.lockTime = lockTime;
+    }
+
+    public Person getLocker() {
+        return locker;
+    }
+
+    @Override
+    public void removeLock() {
+        locker = null;
+        lockTime = null;
+    }
+
+    public void setLocker(Person locker) {
+        this.locker = locker;
+    }
+
     public boolean isApproved() {
         return "1".equals(approved);
     }
@@ -38,6 +67,7 @@ public class Schedule {
     public void setApproved(boolean approved) {
         this.approved = approved?"1":"0";
     }
+
 
 
 	public Integer getId() {
@@ -79,4 +109,6 @@ public class Schedule {
 	public ScheduleConverter getConverter(){
         return new ScheduleConverter(from,to);
     }
+
+
 }

@@ -71,4 +71,19 @@ public class Person {
 		this.lastname = lastname;
         return this;
 	}
+
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof Person){
+            Person p = (Person)o;
+            return p.getId().equals(id);
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode(){
+        return id/1000;
+    }
    }

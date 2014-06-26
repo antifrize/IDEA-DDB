@@ -14,7 +14,6 @@
 
             Instructor:
             <form:select path="instructor">
-                <form:option value="any"/>
                 <c:forEach items="${instructors}" var="instructor">
                     <form:option value="${instructor.person.name} ${instructor.person.surname}"/>
                 </c:forEach>
@@ -22,7 +21,6 @@
             <br>
             Plane:
             <form:select path="plane">
-                <form:option value="any"/>
                 <c:forEach items="${planes}" var="plane">
                     <form:option value="${plane.manufacturer} ${plane.model}"/>
                 </c:forEach>

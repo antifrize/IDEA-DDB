@@ -11,87 +11,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a42de2a5-fb18-41b2-97a2-2df700e3297a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/AdministratorDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/AdministratorDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/BlacklistDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotAddException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/ErrorController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IDEA-DDB (1).iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/IDEA_DDB__1__war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/IDEA_DDB__1__war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__freemarker_freemarker_2_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_tools_3_2_4_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_jtidy_r8_20060801.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/NoSuchPersonException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/RestException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/umc8/vmakarenko/jdbc_test/Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-mystudents.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register-success.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\.idea\libraries\Maven__javax_persistence_persistence_api_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\LoginDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\db_hibernate\LoginDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\mock\LoginDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\mock\NamingFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\mock\PlaneDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\dao\mock\ScheduleDAOImpl.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\VMakarenko\Documents\Study\IDEA-DDB\src\main\java\ru\umc806\vmakarenko\controllers\CommonController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/AppTests.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/AppTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/BlacklistDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/BlacklistDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/BlacklistDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/BlacklistDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/BlacklistServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/BlacklistServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotLockException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Consts.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/JdbcController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Lockable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jdbc-main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/BlacklistDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/BlacklistDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Filter.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Filter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IDEA-DDB.iml" afterPath="$PROJECT_DIR$/IDEA-DDB.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IDEA_DDB_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IDEA_DDB_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Instructor.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Instructor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/InstructorService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/InstructorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/LoginServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/MenuServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/MyJdbcDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/MyJdbcDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/PersonDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/PersonDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PersonDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PersonDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/PersonService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/PersonService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/PersonServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/PersonServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PlaneDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PlaneDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/ScheduleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/ScheduleDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Schedule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponent.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/ScheduleDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/ScheduleServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Student.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/StudentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/StudentDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/StudentDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/StudentDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/StudentService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/StudentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/StudentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/StudentServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/cabinet.css" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/cabinet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/hibernate-dao-beans.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/hibernate-dao-beans.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jdbc-dao-beans.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jdbc-dao-beans.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-request.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-request.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-schedule.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-schedule.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fragments/menu.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fragments/menu.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IDEA-DDB.iws" />
@@ -169,6 +124,21 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java" line="61" class="ru.umc806.vmakarenko.controllers.RestController" package="ru.umc806.vmakarenko.controllers">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -179,10 +149,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ErrorController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/ErrorController.java">
+      <file leaf-file-name="JdbcController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/JdbcController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+            <state line="52" column="36" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.25897437" vertical-offset="682" max-vertical-offset="1462">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beans.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="84" selection-start="5050" selection-end="5050" vertical-scroll-proportion="-17.12" vertical-offset="1068" max-vertical-offset="1989">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggedController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="49" selection-start="5059" selection-end="5059" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2601">
               <folding />
             </state>
           </provider>
@@ -191,28 +181,52 @@
       <file leaf-file-name="InstructorDAOImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1403479549174" expanded="true" signature="1025:1053" placeholder="{...}" />
-              </folding>
+            <state line="27" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java">
+      <file leaf-file-name="PlaneDAOImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="31" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1513">
+            <state line="23" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PersonDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PersonDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="884">
+            <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonDAOImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="178" column="8" selection-start="8751" selection-end="8751" vertical-scroll-proportion="0.0" vertical-offset="2195" max-vertical-offset="3179">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="25" selection-start="452" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jdbc-main.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jdbc-main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="62" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-21.0" vertical-offset="134" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -221,43 +235,7 @@
       <file leaf-file-name="GuestController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstructorServiceImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="5" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.317757" vertical-offset="663" max-vertical-offset="1530">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstructorDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="34" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstructorDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="53" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1326">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cabinet-main.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="415" selection-end="415" vertical-scroll-proportion="-8.5" vertical-offset="51" max-vertical-offset="1292">
+            <state line="34" column="20" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -283,57 +261,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/umc8/vmakarenko/jdbc_test/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/MenuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-mystudents.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/BlacklistService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet-test.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/hibernate-dao-beans.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register-success.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotAddPersonException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotAddException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/MyJdbcDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fragments/menu.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/NoSuchPersonException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/PersonService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/cabinet-template.tag" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/AdministratorDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/AdministratorDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/InstructorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/StudentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/PersonServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Instructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Filter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/AdministratorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/cabinet.css" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/RestException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/StudentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/StudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/StudentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/PersonService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/MyJdbcDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/PersonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fragments/menu.jspf" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Instructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/StudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/StudentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotLockException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Lockable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/BlacklistDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/ScheduleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Consts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-request.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-schedule.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/JdbcController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jdbc-main.jsp" />
       </list>
     </option>
   </component>
@@ -491,6 +469,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IDEA-DDB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -831,40 +819,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDEA-DDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDEA-DDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vmakarenko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1053,6 +1007,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db_jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IDEA-DDB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IDEA-DDB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmakarenko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db_hibernate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1120,16 +1108,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDEA-DDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1780,7 +1758,9 @@
       <workItem from="1403096324596" duration="16969000" />
       <workItem from="1403375222275" duration="10165000" />
       <workItem from="1403446197478" duration="18118000" />
-      <workItem from="1403466086642" duration="15871000" />
+      <workItem from="1403466086642" duration="47565000" />
+      <workItem from="1403755795118" duration="3092000" />
+      <workItem from="1403803614636" duration="7496000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1402738360787</created>
@@ -1790,11 +1770,15 @@
       <created>1402950171302</created>
       <updated>1402950171302</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="111&#10;">
+      <created>1403483728616</created>
+      <updated>1403483728616</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289176000" />
+    <option name="totallyTimeSpent" value="331458000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1818,43 +1802,43 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1216" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27243066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27243066" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19486405" sideWeight="0.5011876" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36497697" sideWeight="0.23801917" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22580644" sideWeight="0.23961662" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534564" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18248849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19062833" sideWeight="0.49830508" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30016312" sideWeight="0.6767372" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18248849" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1943557" sideWeight="0.49881235" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30016312" sideWeight="0.6767372" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36497697" sideWeight="0.76198083" order="3" side_tool="false" content_ui="tabs" x="1387" y="437" width="1878" height="325" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22580644" sideWeight="0.76038337" order="4" side_tool="false" content_ui="tabs" x="1387" y="437" width="1878" height="325" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21192758" sideWeight="0.5005821" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21831736" sideWeight="0.500565" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31612903" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3124424" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21192758" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10596379" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10543131" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3980424" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299539" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3980424" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1871,7 +1855,8 @@
     </option>
     <MESSAGE value="Initial commit" />
     <MESSAGE value="111" />
-    <option name="LAST_COMMIT_MESSAGE" value="111" />
+    <MESSAGE value="111&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="111&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1885,389 +1870,366 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/MenuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="30" selection-start="1457" selection-end="1457" vertical-scroll-proportion="-4.0" vertical-offset="661" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.3.RELEASE/spring-security-core-3.2.3.RELEASE.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="25" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.35568514" vertical-offset="507" max-vertical-offset="1054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="68" selection-start="1279" selection-end="1279" vertical-scroll-proportion="-5.88" vertical-offset="159" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="1360">
-          <folding>
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#719#720#0" expanded="false" />
-            <element signature="e#837#838#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="false" />
-            <element signature="method#setPass_hash#0;class#Person#0" expanded="false" />
-            <element signature="e#988#989#0" expanded="false" />
-            <element signature="e#1004#1005#0" expanded="false" />
-            <element signature="method#setId#0;class#Person#0" expanded="false" />
-            <element signature="e#1110#1111#0" expanded="false" />
-            <element signature="e#1132#1133#0" expanded="false" />
-            <element signature="method#setPassport#0;class#Person#0" expanded="false" />
-            <element signature="e#1257#1258#0" expanded="false" />
-            <element signature="e#1275#1276#0" expanded="false" />
-            <element signature="method#setName#0;class#Person#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-            <element signature="e#1408#1409#0" expanded="false" />
-            <element signature="method#setSurname#0;class#Person#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1555#1556#0" expanded="false" />
-            <element signature="method#setLastname#0;class#Person#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="46" selection-start="3601" selection-end="3601" vertical-scroll-proportion="-7.56" vertical-offset="746" max-vertical-offset="2516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/cabinet-template.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="685" selection-end="685" vertical-scroll-proportion="0.7280702" vertical-offset="91" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fragments/menu.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.0.5.RELEASE/spring-test-4.0.5.RELEASE.jar!/org/springframework/test/context/web/WebAppConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="379" selection-end="419" vertical-scroll-proportion="0.24797407" vertical-offset="0" max-vertical-offset="617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/umc8/vmakarenko/jdbc_test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="687" selection-end="773" vertical-scroll-proportion="0.20923077" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/PersonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="424" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/AdministratorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="125" selection-end="125" vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/NoSuchPersonException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="11" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+        <state line="24" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="765">
           <folding>
+            <element signature="e#670#671#0" expanded="false" />
+            <element signature="e#686#687#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#811#812#0" expanded="false" />
+            <element signature="method#setPerson#0;class#Student#0" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
             <element signature="method#setGraduated#0;class#Student#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Instructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="1066" selection-end="1066" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="552" selection-end="552" vertical-scroll-proportion="0.529595" vertical-offset="17" max-vertical-offset="986">
-          <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/AdministratorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="47" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.25856698" vertical-offset="582" max-vertical-offset="1224">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/PersonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="34" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.0" vertical-offset="755" max-vertical-offset="1768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/MyJdbcDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="37" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/RestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12820514" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/cabinet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="15" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="285" selection-end="709" vertical-scroll-proportion="3.2692308" vertical-offset="204" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-request.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="972" selection-end="972" vertical-scroll-proportion="0.6938776" vertical-offset="0" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-schedule.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="1358" selection-end="1358" vertical-scroll-proportion="-22.23077" vertical-offset="102" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="35" selection-start="2311" selection-end="2311" vertical-scroll-proportion="-20.4" vertical-offset="306" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="1587" selection-end="1587" vertical-scroll-proportion="-11.24" vertical-offset="246" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="31" selection-start="2725" selection-end="2725" vertical-scroll-proportion="-8.36" vertical-offset="488" max-vertical-offset="2040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotAddException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="179" selection-end="179" vertical-scroll-proportion="0.17948718" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/ScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="37" selection-start="4303" selection-end="4303" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="1802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="415" selection-end="415" vertical-scroll-proportion="0.18535826" vertical-offset="0" max-vertical-offset="642">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="35" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="62" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/StudentDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+        <state line="60" column="9" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="1190">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/StudentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="60" selection-start="3369" selection-end="3369" vertical-scroll-proportion="-11.16" vertical-offset="1142" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1403479549174" expanded="true" signature="1025:1053" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.7317881" vertical-offset="102" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/ErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/PersonDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="53" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="415" selection-end="415" vertical-scroll-proportion="-8.5" vertical-offset="51" max-vertical-offset="1292">
+        <state line="99" column="0" selection-start="2957" selection-end="2957" vertical-scroll-proportion="-4.0" vertical-offset="1362" max-vertical-offset="1904">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/RestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="31" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1513">
+        <state line="57" column="1" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0" vertical-offset="929" max-vertical-offset="1989">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/InstructorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="13" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.4811321" vertical-offset="612" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/InstructorService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-approve.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.45015576" vertical-offset="0" max-vertical-offset="642">
+        <state line="19" column="15" selection-start="722" selection-end="722" vertical-scroll-proportion="-3.6923077" vertical-offset="227" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/InstructorServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/exceptions/CannotLockException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="5" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.317757" vertical-offset="663" max-vertical-offset="1530">
+        <state line="6" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.34343433" vertical-offset="0" max-vertical-offset="297">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="11" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.75609756" vertical-offset="0" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/ScheduleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="24" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/AdministratorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Lockable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="136" selection-end="136" vertical-scroll-proportion="0.16573817" vertical-offset="0" max-vertical-offset="718">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/BlacklistDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1003">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/StudentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.52089137" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/ScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.4972145" vertical-offset="0" max-vertical-offset="718">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/InstructorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="268" selection-end="268" vertical-scroll-proportion="0.09470752" vertical-offset="0" max-vertical-offset="718">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/ScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="953" selection-end="953" vertical-scroll-proportion="0.4735376" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0" vertical-offset="213" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/domain/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1054">
+          <folding>
+            <element signature="e#1004#1005#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/service/mock/ScheduleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="20" selection-start="7156" selection-end="7156" vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2992">
+          <folding>
+            <element signature="e#7233#7774#0" expanded="false" />
+            <element signature="e#7751#7752#0" expanded="false" />
+            <element signature="e#8003#8316#0" expanded="false" />
+            <element signature="e#8293#8294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.3.Final/hibernate-core-4.3.3.Final.jar!/org/hibernate/SharedSessionContract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="503" selection-end="503" vertical-scroll-proportion="0.35224587" vertical-offset="123" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="-9.08" vertical-offset="317" max-vertical-offset="731" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.0.5.RELEASE/spring-webmvc-4.0.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="19" selection-start="7377" selection-end="7377" vertical-scroll-proportion="-5.16" vertical-offset="1673" max-vertical-offset="2227" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.0.5.RELEASE/spring-webmvc-4.0.5.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="28" selection-start="8391" selection-end="8391" vertical-scroll-proportion="-5.52" vertical-offset="2004" max-vertical-offset="2499" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar!/org/springframework/transaction/support/TransactionTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="1303" selection-end="1303" vertical-scroll-proportion="-9.44" vertical-offset="121" max-vertical-offset="510" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="35" selection-start="2311" selection-end="2311" vertical-scroll-proportion="-10.8" vertical-offset="546" max-vertical-offset="935" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="1066" selection-end="1066" vertical-scroll-proportion="-8.08" vertical-offset="138" max-vertical-offset="527" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/Consts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="100" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_hibernate/CommonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="88" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="3060">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.0.5.RELEASE/spring-webmvc-4.0.5.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="174" selection-end="174" vertical-scroll-proportion="0.23809524" vertical-offset="0" max-vertical-offset="1037" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/SchedulerItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponentNew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponentWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="5" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleHeaderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0" vertical-offset="427" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/CabinetRequestObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-schedule.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="31" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cabinet-request.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="82" selection-start="426" selection-end="426" vertical-scroll-proportion="0.30312034" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/util/schedule/ScheduleComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="13" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="18" selection-start="971" selection-end="971" vertical-scroll-proportion="0.5788146" vertical-offset="0" max-vertical-offset="793">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/InstructorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PlaneDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="84" selection-start="5050" selection-end="5050" vertical-scroll-proportion="-17.12" vertical-offset="1068" max-vertical-offset="1989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/CommonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="452" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jdbc-main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="62" selection-start="1456" selection-end="1456" vertical-scroll-proportion="-21.0" vertical-offset="134" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/CommonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="8" selection-start="8751" selection-end="8751" vertical-scroll-proportion="0.0" vertical-offset="2195" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/dao/db_jdbc/PersonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/LoggedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="49" selection-start="5059" selection-end="5059" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="2601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/umc806/vmakarenko/controllers/JdbcController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="36" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.25897437" vertical-offset="682" max-vertical-offset="1462">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

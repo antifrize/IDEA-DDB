@@ -22,6 +22,10 @@
     <bean id="instructorPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.InstructorPropertyEditor"/>
     <bean id="planePropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.PlanePropertyEditor"/>
     <bean id="studentPropertyEditor" class="ru.umc806.vmakarenko.propertyEditor.StudentPropertyEditor"/>
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
 
     <bean id="scheduleComponent" class="ru.umc806.vmakarenko.util.schedule.ScheduleComponent" scope="request">
         <aop:scoped-proxy/>
@@ -65,17 +69,29 @@
         </property>
     </bean>
 
-    <bean id="instructorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.InstructorDAOImpl"/>
-    <bean id="studentDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.StudentDAOImpl"/>
-    <bean id="scheduleDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.ScheduleDAOImpl"/>
-    <bean id="personDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PersonDAOImpl"/>
-    <bean id="planeDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PlaneDAOImpl"/>
-    <bean id="blacklistDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.BlacklistDAOImpl"/>
-    <bean id="administratorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.AdministratorDAOImpl"/>
+    <bean id="instructorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.InstructorDAOImpl" primary="true"/>
+    <bean id="studentDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.StudentDAOImpl" primary="true"/>
+    <bean id="scheduleDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.ScheduleDAOImpl" primary="true"/>
+    <bean id="personDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PersonDAOImpl" primary="true"/>
+    <bean id="planeDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.PlaneDAOImpl" primary="true"/>
+    <bean id="blacklistDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.BlacklistDAOImpl" primary="true"/>
+    <bean id="administratorDAO" class="ru.umc806.vmakarenko.dao.db_hibernate.AdministratorDAOImpl" primary="true"/>
+
+    <bean id="instructorDAOjdbc" class="ru.umc806.vmakarenko.dao.db_jdbc.InstructorDAOImpl">
+        <qualifier value="jdbc"></qualifier>
+    </bean>
+    <bean id="scheduleDAOjdbc" class="ru.umc806.vmakarenko.dao.db_jdbc.ScheduleDAOImpl">
+        <qualifier value="jdbc"></qualifier>
+    </bean>
+    <bean id="planeDAOjdbc" class="ru.umc806.vmakarenko.dao.db_jdbc.PlaneDAOImpl">
+        <qualifier value="jdbc"></qualifier>
+    </bean>
+    <bean id="studentDAOjdbc" class="ru.umc806.vmakarenko.dao.db_jdbc.StudentDAOImpl">
+        <qualifier value="jdbc"></qualifier>
+    </bean>
 
 
-
-    <!-- Hibernate session factory -->
+        <!-- Hibernate session factory -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />

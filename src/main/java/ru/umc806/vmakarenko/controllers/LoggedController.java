@@ -103,9 +103,13 @@ public class LoggedController {
 
 
     @RequestMapping(method = RequestMethod.GET,value="schedule")
-    public ModelAndView schedule(Model model, HttpServletRequest request) {
+    public ModelAndView schedule(Principal principal) {
         LOG.debug("open schedule");
         ModelAndView mav = new ModelAndView("cabinet-schedule");
+        List<Student> list = studentService.getStudent(new Filter().setPerson(new Person().setLogin(principal.getName())));
+        if(!list.isEmpty()){
+            scheduleComponent.setStudent(list.get(0));
+        }
         mav.addObject("scheduler", scheduleComponent);
         return mav;
     }
@@ -120,10 +124,11 @@ public class LoggedController {
     }
 
     @RequestMapping(value = "request", method = RequestMethod.GET)
-    public ModelAndView request( ) {
+    public ModelAndView request(Principal principal ) {
         LOG.debug("create request");
         ModelAndView mav = new ModelAndView("cabinet-request");
-        mav.addObject("cabinetRequest",new CabinetRequestObject());
+        CabinetRequestObject cro = new CabinetRequestObject();
+        mav.addObject("cabinetRequest",cro);
         mav.addObject("instructors",instructorService.getAll());
         mav.addObject("planes",planeService.getAll());
         return mav;
@@ -144,7 +149,7 @@ public class LoggedController {
         try{
             if(cro!=null){
                 Schedule schedule = cro.getSchedule();
-                schedule.setStudent(studentService.getStudent(new Filter().setPerson(roleService.getPerson("sergey"))).get(0));
+                schedule.setStudent(studentService.getStudent(new Filter().setPerson(new Person().setLogin(principal.getName()))).get(0));
                 scheduleService.addIfPossible(schedule);
                 resultString = "You successfully requested a lesson.";
             }

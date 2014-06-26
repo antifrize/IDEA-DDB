@@ -42,10 +42,13 @@ public class InstructorDAOImpl  extends CommonDAOImpl<Instructor> implements Ins
             LOG.debug("filtering by instructor");
             Instructor instructor = filter.getInstructor();
             if(instructor.getId()!=null){
-                criteria.add(Restrictions.eq("person_id",instructor.getId()));
+                criteria.add(Restrictions.eq("id",instructor.getId()));
             }
             if(instructor.getLicense()!=null){
                 criteria.add(Restrictions.eq("instr_license",instructor.getLicense()));
+            }
+            if(instructor.isApproved()!=null){
+                criteria.add(Restrictions.eq("approved",instructor.isApproved()?"Y":"N"));
             }
         }
         if(filter.getPerson()!=null){
@@ -62,7 +65,7 @@ public class InstructorDAOImpl  extends CommonDAOImpl<Instructor> implements Ins
                 criteria.add(Restrictions.eq("person.surname",person.getSurname()));
             }
             if(person.getLastname()!=null){
-                criteria.add(Restrictions.eq("person.last_name",person.getLastname()));
+                criteria.add(Restrictions.eq("person.lastname",person.getLastname()));
             }
             if(person.getLogin()!=null){
                 criteria.add(Restrictions.eq("person.login",person.getLogin()));

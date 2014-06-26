@@ -53,7 +53,6 @@
                     <div class="scheduleItems">
 
                         <div id="sched_${scheduleItem.schedule.id}" class="scheduleItem_${scheduleItem.status}">
-                            <!-- TODO Calendar in JSP? -->
                             Time: ${scheduleItem.schedule.converter.from.hours}:${scheduleItem.schedule.converter.from.minutes} - ${scheduleItem.schedule.to.time.hours}:${scheduleItem.schedule.to.time.minutes} <br>
                             Instructor: ${scheduleItem.schedule.instructor.person.name} ${scheduleItem.schedule.instructor.person.surname}<br>
                             Student: ${scheduleItem.schedule.student.person.name} ${scheduleItem.schedule.student.person.surname}<br>

@@ -39,8 +39,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> getBlacklisted() {
-        studentDAO.list(new Filter().setBlacklisted(true));
-        return null;
+        return studentDAO.list(new Filter().setBlacklisted(true));
     }
 
     @Override
@@ -60,7 +59,7 @@ public class StudentServiceImpl implements StudentService {
         }else{
             List<Person> personList = personDAO.list(new Filter().setBlacklisted(false));
             for(Person currentPerson:personList){
-                //FIXME here too
+                // FIXME here too
                 resultList.addAll(studentDAO.list(new Filter().setPerson(currentPerson)));
             }
 
@@ -88,13 +87,15 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> getUnapproved() {
         Student student = new Student();
-        student.setApproved(true);
+        student.setApproved(false);
         return studentDAO.list(new Filter().setStudent(student));
     }
 
     @Override
     public boolean approve(String id) {
-        Student student = studentDAO.get(Integer.parseInt(id));
+        Student student = studentDAO.list(
+                new Filter().setStudent(
+                        new Student().setId(Integer.parseInt(id)))).get(0);
         student.setApproved(true);
         studentDAO.update(student);
         return true;

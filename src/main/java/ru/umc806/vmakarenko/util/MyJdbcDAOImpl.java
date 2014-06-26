@@ -81,6 +81,14 @@ public class MyJdbcDAOImpl extends JdbcDaoImpl {
                 list.add(new SimpleGrantedAuthority("ROLE_STUDENT"));
                 LOG.debug("student");
             }
+            if(personService.isUnapprovedInstructor(username)){
+                list.add(new SimpleGrantedAuthority("ROLE_INSTRUCTOR_UNAPPROVED"));
+                LOG.debug("instructor");
+            }
+            if(personService.isUnapprovedStudent(username)){
+                list.add(new SimpleGrantedAuthority("ROLE_STUDENT_UNAPPROVED"));
+                LOG.debug("student");
+            }
             if(!sessionFactory.openSession().createCriteria(Person.class).add(Restrictions.eq("login",username)).list().isEmpty()){
                 list.add(new SimpleGrantedAuthority("ROLE_LOGGED"));
             }

@@ -68,7 +68,7 @@ public class InstructorServiceImpl implements InstructorService {
     @Override
     public List<Instructor> getUnapproved() {
         Instructor instructor = new Instructor();
-        instructor.setApproved(true);
+        instructor.setApproved(false);
         return instructorDAO.list(new Filter().setInstructor(instructor));
     }
 

@@ -17,6 +17,9 @@ public interface PersonService {
     public boolean isInstructor(String person);
     public boolean isStudent(String person);
     public boolean isAdmin(String person);
+    public boolean isUnapprovedInstructor(String person);
+    public boolean isUnapprovedStudent(String person);
+
     public void addPerson(Person person) throws CannotAddException;
     public Person getOne(Filter filter) throws NoSuchPersonException;
     public List<Person> get(Filter filter) throws NoSuchPersonException;

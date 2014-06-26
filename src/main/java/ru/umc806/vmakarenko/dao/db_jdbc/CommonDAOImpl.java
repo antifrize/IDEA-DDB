@@ -151,6 +151,35 @@ public abstract class CommonDAOImpl<E> implements CommonDAO<E>{
         return null;
     }
 
+    public List<E> list(){
+        try{
+            Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement(String.format("SELECT * FROM %s",getTableName()));
+            ResultSet rs = ps.executeQuery();
+            List<E> list = new ArrayList<>();
+            while(rs.next()){
+                E entity = currentClass.newInstance();
+                for(Field field: currentClass.getDeclaredFields()){
+                    field.setAccessible(true);
+                    if(field.getAnnotation(Column.class)!=null){
+                        String columnName = field.getAnnotation(Column.class).name();
+                        field.set(entity, field.getType().equals(String.class) ? rs.getString(columnName) : rs.getInt(columnName));
+                    }
+                    if(field.getAnnotation(ManyToOne.class)!=null || field.getAnnotation(OneToOne.class)!=null || field.getAnnotation(OneToMany.class)!=null){
+                        CommonDAO dao = (CommonDAO)Class.forName("ru.umc806.vmakarenko.dao.db_jdbc."+field.getName().substring(0,1).toUpperCase()+field.getName().substring(1)+"DAOImpl").getConstructor().newInstance();
+                        field.set(entity, dao.get(rs.getInt(field.getAnnotation(JoinColumn.class).name())));
+                    }
+                }
+                list.add(entity);
+            }
+            return list;
+        }catch(Exception e){
+
+        }
+        return null;
+    }
+
+
     private String getTableName() {
         return currentClass.getAnnotation(Table.class).name();
     }

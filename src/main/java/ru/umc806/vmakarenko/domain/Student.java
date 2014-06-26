@@ -39,11 +39,11 @@ public class Student {
 		this.graduated = graduated;
         return this;
 	}
-    public boolean isApproved() {
+    public Boolean isApproved() {
         return "Y".equalsIgnoreCase(approved);
     }
 
-    public Student setApproved(boolean approved) {
+    public Student setApproved(Boolean approved) {
         this.approved = approved?"Y":"N";
         return this;
     }
